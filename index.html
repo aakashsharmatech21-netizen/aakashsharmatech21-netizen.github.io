@@ -1071,7 +1071,7 @@
               <label class="form-label">Message</label>
               <textarea class="form-input" placeholder="What would you like to discuss?"></textarea>
             </div>
-            <button class="btn btn-primary" style="align-self:flex-start;" onclick="alert('Portfolio live — replace with EmailJS or Formspree for real submissions!')">Send Message</button>
+            <button class="btn btn-primary" style="align-self:flex-start;" onclick="submitForm()"
           </div>
         </div>
       </div>
@@ -1096,6 +1096,20 @@
       });
     }, { threshold: 0.12 });
     revealEls.forEach(el => observer.observe(el));
+
+    async function submitForm() {
+  const data = {
+    name: document.querySelectorAll('.form-input')[0].value,
+    email: document.querySelectorAll('.form-input')[1].value,
+    message: document.querySelectorAll('.form-input')[2].value,
+  };
+  await fetch('https://formspree.io/f/xvzdbgoe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+  alert('Message sent!');
+}
 
     // Hero elements animate on load
     document.querySelectorAll('#hero .hero-tag, #hero .hero-name, #hero .hero-role, #hero .hero-bio, #hero .hero-cta').forEach((el, i) => {
