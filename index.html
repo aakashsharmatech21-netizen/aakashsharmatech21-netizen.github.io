@@ -578,12 +578,17 @@
       font-weight: 500;
     }
 
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
     .highlight-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 0.75rem;
       padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
       display: flex;
       align-items: flex-start;
       gap: 1rem;
@@ -736,6 +741,7 @@
       .projects-grid { grid-template-columns: 1fr; }
       .skills-layout { grid-template-columns: 1fr; gap: 2rem; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .highlights-grid { grid-template-columns: 1fr; }
       .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
       footer { flex-direction: column; gap: 0.75rem; text-align: center; }
     }
@@ -1055,6 +1061,7 @@
         </div>
 
         <div class="reveal reveal-delay-1">
+          <div class="highlights-grid">
           <div class="highlight-card">
             <div class="highlight-icon">📊</div>
             <div>
@@ -1110,6 +1117,35 @@
               <div class="highlight-title">Big Data & Data Science Bootcamp</div>
               <div class="highlight-sub">C-DAC Noida · FutureSkills PRIME · May 2025</div>
             </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🐍</div>
+            <div>
+              <div class="highlight-title">Data Analysis with Python</div>
+              <div class="highlight-sub">freeCodeCamp · 300 hours</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🗃️</div>
+            <div>
+              <div class="highlight-title">Introduction to SQL</div>
+              <div class="highlight-sub">Simplilearn</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">📗</div>
+            <div>
+              <div class="highlight-title">Introduction to Microsoft Excel</div>
+              <div class="highlight-sub">Simplilearn</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">💼</div>
+            <div>
+              <div class="highlight-title">Deloitte Australia Technology Job Simulation</div>
+              <div class="highlight-sub">Forage</div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
